@@ -14,6 +14,10 @@ const loadVideos = () => {
     .catch((error) => console.error(error));
 };
 
+const cardDemo = {
+  
+}
+
 // videos section code
 const displayVideos = (videos) => {
   const videoContainer = document.getElementById("video-container");
@@ -22,16 +26,20 @@ const displayVideos = (videos) => {
     const card = document.createElement("div");
     card.classList = "card card-compact";
     card.innerHTML = `
-     <figure>
+     <figure class="h-[200px]">
     <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      src=${video.thumbnail}
+      class="h-full w-full object-cover"
       alt="Shoes" />
   </figure>
-  <div class="card-body">
-    <h2 class="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Buy Now</button>
+  <div class="px-0 py-2 flex gap-2">
+    <div>
+    <img src="" />
+    </div>
+     <div class="space-y-2">
+     <h4 class="font-bold text-lg">Building a Winning UX Strategy Using the Kano Model</h4>
+     <h3>Awlad Hossain</h3>
+     <p>91K views</p>
     </div>
   </div>
     `;
