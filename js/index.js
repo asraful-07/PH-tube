@@ -13,6 +13,14 @@ const loadVideos = () => {
     .then((data) => displayVideos(data.videos))
     .catch((error) => console.error(error));
 };
+// cell btn
+const removeActiveClass = () => {
+  const buttons = document.getElementsByClassName("category-btn");
+  console.log(buttons);
+  for (let btn of buttons) {
+    btn.classList.remove("active");
+  }
+};
 
 const loadCategoryVideos = (id) => {
   // alert (id);
@@ -20,7 +28,7 @@ const loadCategoryVideos = (id) => {
   .then(res => res.json())
   .then((data) => {
     //sobaike active class remove korao
-    // removeActiveClass();
+    removeActiveClass();
 
     //id er class k active korao
     const activeBtn = document.getElementById(`btn-${id}`);
@@ -61,10 +69,10 @@ const displayVideos = (videos) => {
      }
   </figure>
   <div class="px-0 py-2 flex gap-2">  
-    <img class="w-10 h-10 object-cover  rounded-full" src="${video.authors[0].profile_picture}" />
+    <img class="w-10 h-10 object-cover rounded-full" src="${video.authors[0].profile_picture}" />
      <div class="space-y-2">
        <h2 class="font-bold">${video.title}</h2>
-       <div class="flex items-center gap-2">
+       <div class="flex items-center gap-1">
        <p class="text-gray-400">${video.authors[0].profile_name}</p>
        ${video.authors[0].verified == true
         ? `<img class="w-5" src="https://img.icons8.com/?size=96&id=D9RtvkuOe31p&format=png" /> ` : ""
@@ -77,9 +85,6 @@ const displayVideos = (videos) => {
   });
 };
 
-// start
-
-// end
 
 // button section code
 const displayCategories = (categories) => {
