@@ -90,7 +90,7 @@ const displayVideos = (videos) => {
 const displayCategories = (categories) => {
   const categoriesContainer = document.getElementById("categories-container");
   categories.forEach((item) => {
-    console.log(item);
+    // console.log(item);
     const buttonContainer = document.createElement("div");
     buttonContainer.innerHTML = `
     <button id="btn-${item.category_id}" onclick="loadCategoryVideos(${item.category_id})" class="btn category-btn">
