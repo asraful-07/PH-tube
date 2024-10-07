@@ -71,25 +71,6 @@ const displayDetails = (video) => {
   document.getElementById("customModal").showModal();
 };
 
-// const cardDemo = {
-//   category_id: "1001",
-//   video_id: "aaad",
-//   thumbnail: "https://i.ibb.co/f9FBQwz/smells.jpg",
-//   title: "Smells Like Teen Spirit",
-//   authors: [
-//     {
-//       profile_picture: "https://i.ibb.co/k4tkc42/oliviar-harris.jpg",
-//       profile_name: "Oliver Harris",
-//       verified: true,
-//     },
-//   ],
-//   others: {
-//     views: "5.4K",
-//     posted_date: "1672656000",
-//   },
-//   description:
-//     "'Smells Like Teen Spirit' by Oliver Harris captures the raw energy and rebellious spirit of youth. With over 5.4K views, this track brings a grunge rock vibe, featuring powerful guitar riffs and compelling vocals. Oliver's verified profile guarantees a quality musical journey that resonates with fans of dynamic, high-energy performances.",
-// };
 
 const displayVideos = (videos) => {
   const videoContainer = document.getElementById("videos");
@@ -155,10 +136,6 @@ const displayVideos = (videos) => {
   });
 };
 
-// {
-//     "category_id": "1001",
-//     "category": "Music"
-// }
 
 //Create DisplayCategories
 const displayCategories = (categories) => {
